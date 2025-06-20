@@ -24,7 +24,7 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"github.com/IceWhaleTech/CasaOS-CLI/codegen/app_management"
+	"github.com/BeesNestInc/CassetteOS-CLI/codegen/app_management"
 	"github.com/mitchellh/mapstructure"
 	"github.com/samber/lo"
 	"github.com/spf13/cobra"
@@ -123,7 +123,7 @@ var appManagementListAppsCmd = &cobra.Command{
 					status,
 					"n/a",
 					strings.Join(images, ","),
-					"(not a CasaOS compose app)",
+					"(not a CassetteOS compose app)",
 				)
 				continue
 			}

@@ -26,7 +26,7 @@ import (
 // qrcodeCmd represents the qrcode command
 var qrcodeCmd = &cobra.Command{
 	Use:   "qrcode",
-	Short: "show qrcode to CasaOS WebUI",
+	Short: "show qrcode to CassetteOS WebUI",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		rootURL, err := rootCmd.PersistentFlags().GetString(FlagRootURL)
 		if err != nil {

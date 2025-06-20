@@ -22,7 +22,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/IceWhaleTech/CasaOS-CLI/codegen/message_bus"
+	"github.com/BeesNestInc/CassetteOS-CLI/codegen/message_bus"
 	"github.com/spf13/cobra"
 )
 

@@ -25,7 +25,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/IceWhaleTech/CasaOS-CLI/codegen/local_storage"
+	"github.com/BeesNestInc/CassetteOS-CLI/codegen/local_storage"
 )
 
 // localStorageListMergesCmd represents the localStorageListMerges command
