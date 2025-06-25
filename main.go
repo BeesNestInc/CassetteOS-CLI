@@ -30,6 +30,10 @@ var (
 	version = "0.4.4"
 	commit  = "unknown"
 	date    = "unknown"
+
+	Version string
+	Commit  string
+	Date    string
 )
 
 func main() {
