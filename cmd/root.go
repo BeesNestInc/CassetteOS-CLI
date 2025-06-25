@@ -35,7 +35,7 @@ const (
 	FlagForce   = "force"
 	FlagRootURL = "root-url"
 
-	GatewayPath = "/etc/casaos/gateway.ini"
+	GatewayPath = "/etc/cassetteos/gateway.ini"
 
 	DefaultTimeout = 10 * time.Second
 	RootGroupID    = "casaos-cli"

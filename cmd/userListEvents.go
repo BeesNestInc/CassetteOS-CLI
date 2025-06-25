@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/IceWhaleTech/CasaOS-CLI/codegen/user_service"
+	"github.com/BeesNestInc/CassetteOS-CLI/codegen/user_service"
 	"github.com/spf13/cobra"
 )
 

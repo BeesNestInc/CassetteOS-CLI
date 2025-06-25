@@ -22,7 +22,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/IceWhaleTech/CasaOS-CLI/codegen/app_management"
+	"github.com/BeesNestInc/CassetteOS-CLI/codegen/app_management"
 	"github.com/alecthomas/chroma/quick"
 	"github.com/samber/lo"
 	"github.com/spf13/cobra"
@@ -65,7 +65,7 @@ var appManagementConvertAppFileCmd = &cobra.Command{
 
 		response, err := client.ConvertWithBodyWithResponse(ctx, &params, MINEApplicationJSON, file)
 		if err != nil {
-			fmt.Println("Error: Unable to reach CasaOS API. Try convert locally using `appfile2compose` command.")
+			fmt.Println("Error: Unable to reach CassetteOS API. Try convert locally using `appfile2compose` command.")
 			return err
 		}
 

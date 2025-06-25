@@ -25,7 +25,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/IceWhaleTech/CasaOS-CLI/codegen/message_bus"
+	"github.com/BeesNestInc/CassetteOS-CLI/codegen/message_bus"
 )
 
 // messageBusListEventTypesCmd represents the messageBusListEventTypes command

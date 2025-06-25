@@ -21,7 +21,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/IceWhaleTech/CasaOS-CLI/codegen/app_management"
+	"github.com/BeesNestInc/CassetteOS-CLI/codegen/app_management"
 	"github.com/spf13/cobra"
 )
 

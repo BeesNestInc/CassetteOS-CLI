@@ -1,16 +1,13 @@
-# CasaOS-CLI
-
-[![Go Reference](https://pkg.go.dev/badge/github.com/IceWhaleTech/CasaOS-CLI.svg)](https://pkg.go.dev/github.com/IceWhaleTech/CasaOS-CLI) [![Go Report Card](https://goreportcard.com/badge/github.com/IceWhaleTech/CasaOS-CLI)](https://goreportcard.com/report/github.com/IceWhaleTech/CasaOS-CLI) [![goreleaser](https://github.com/IceWhaleTech/CasaOS-CLI/actions/workflows/release.yml/badge.svg)](https://github.com/IceWhaleTech/CasaOS-CLI/actions/workflows/release.yml) [![codecov](https://codecov.io/github/IceWhaleTech/CasaOS-CLI/branch/main/graph/badge.svg?token=XHM6PM8C0K)](https://codecov.io/github/IceWhaleTech/CasaOS-CLI)
-
-A command-line tool to interact with CasaOS for testing and diagnosing purpose
+# CassetteOS-CLI
+A command-line tool to interact with CassetteOS for testing and diagnosing purpose
 
 ## Usage
 
 ```text
-A command line interface for CasaOS
+A command line interface for CassetteOS
 
 Usage:
-  casaos-cli [command]
+  cassetteos-cli [command]
 
 Services
   app-management All compose app management and store related commands
@@ -23,21 +20,21 @@ Additional Commands:
   version        Show version
 
 Flags:
-  -h, --help              help for casaos-cli
-  -u, --root-url string   root url of CasaOS API (default "localhost:80")
+  -h, --help              help for cassetteos-cli
+  -u, --root-url string   root url of CassetteOS API (default "localhost:80")
 
 Additional help topics:
-  casaos-cli gateway        All gateway related commands
-  casaos-cli user           All user related commands
+  cassetteos-cli gateway        All gateway related commands
+  cassetteos-cli user           All user related commands
 
-Use "casaos-cli [command] --help" for more information about a command.
+Use "cassetteos-cli [command] --help" for more information about a command.
 ```
 
 ## Contributing
 
 Use <https://github.com/spf13/cobra-cli> to add any new command.
 
-Follow example steps below to add commands like `casaos-cli message-bus list event-types`
+Follow example steps below to add commands like `cassetteos-cli message-bus list event-types`
 
 1. create command scaffold with `cobra-cli add`:
 
@@ -80,7 +77,7 @@ Follow example steps below to add commands like `casaos-cli message-bus list eve
     list event types
 
     Usage:
-    CasaOS-CLI message-bus list event-types [flags]
+    CassetteOS-CLI message-bus list event-types [flags]
 
     Flags:
     -h, --help   help for event-types
