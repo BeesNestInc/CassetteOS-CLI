@@ -1,6 +1,8 @@
 module github.com/BeesNestInc/CassetteOS-CLI
 
-go 1.20
+go 1.21
+
+toolchain go1.21.7
 
 require (
 	github.com/alecthomas/chroma v0.10.0
@@ -47,7 +49,7 @@ require (
 )
 
 require (
-	github.com/BeesNestInc/CassetteOS-Common v0.4.15-alpha1-cs1.1.2
+	github.com/BeesNestInc/CassetteOS-Common v0.0.2
 	github.com/googollee/go-socket.io v1.7.0
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
