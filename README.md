@@ -1,6 +1,8 @@
 # CassetteOS-CLI
 このリポジトリは CassetteOS のテストや診断を行うコマンドラインツールです。  
 
+このプロジェクトは IceWhaleTech の [CasaOS-CLI](https://github.com/IceWhaleTech/CasaOS-CLI) に基づいており、CassetteOS に対応するための調整および機能拡張を行っています。
+
 ## Usage
 
 ```text
