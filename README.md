@@ -1,5 +1,5 @@
 # CassetteOS-CLI
-A command-line tool to interact with CassetteOS for testing and diagnosing purpose
+このリポジトリは CassetteOS のテストや診断を行うコマンドラインツールです。  
 
 ## Usage
 
