@@ -22,14 +22,14 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"github.com/BeesNestInc/CassetteOS-CLI/codegen/casaos"
+	"github.com/BeesNestInc/CassetteOS-CLI/codegen/cassetteos"
 	"github.com/spf13/cobra"
 )
 
 // healthcheckServicesCmd represents the healthcheckServices command
 var healthcheckServicesCmd = &cobra.Command{
 	Use:     "services",
-	Short:   "get running status of each `casaos-*` service",
+	Short:   "get running status of each `cassetteos-*` service",
 	Aliases: []string{"svc", "service"},
 	RunE: func(cmd *cobra.Command, args []string) error {
 		rootURL, err := rootCmd.PersistentFlags().GetString(FlagRootURL)
@@ -37,9 +37,9 @@ var healthcheckServicesCmd = &cobra.Command{
 			return err
 		}
 
-		url := fmt.Sprintf("http://%s/%s", rootURL, BasePathCasaOS)
+		url := fmt.Sprintf("http://%s/%s", rootURL, BasePathCassetteOS)
 
-		client, err := casaos.NewClientWithResponses(url)
+		client, err := cassetteos.NewClientWithResponses(url)
 		if err != nil {
 			return err
 		}
@@ -53,7 +53,7 @@ var healthcheckServicesCmd = &cobra.Command{
 		}
 
 		if response.StatusCode() != http.StatusOK {
-			var baseResponse casaos.BaseResponse
+			var baseResponse cassetteos.BaseResponse
 			if err := json.Unmarshal(response.Body, &baseResponse); err != nil {
 				return fmt.Errorf("%s - %s", response.Status(), response.Body)
 			}

@@ -27,7 +27,7 @@ import (
 )
 
 const (
-	BasePathCasaOS = "v2/casaos"
+	BasePathCassetteOS = "v2/cassetteos"
 
 	FlagDir     = "dir"
 	FlagDryRun  = "dry-run"
@@ -38,7 +38,7 @@ const (
 	GatewayPath = "/etc/cassetteos/gateway.ini"
 
 	DefaultTimeout = 10 * time.Second
-	RootGroupID    = "casaos-cli"
+	RootGroupID    = "cassetteos-cli"
 )
 
 var (
@@ -51,8 +51,8 @@ var (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "casaos-cli",
-	Short: "A command line interface for CasaOS",
+	Use:   "cassetteos-cli",
+	Short: "A command line interface for CassetteOS",
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
@@ -70,7 +70,7 @@ func Execute() {
 func init() {
 	url := ""
 
-	rootCmd.PersistentFlags().StringP(FlagRootURL, "u", "", "root url of CasaOS API")
+	rootCmd.PersistentFlags().StringP(FlagRootURL, "u", "", "root url of CassetteOS API")
 
 	if rootCmd.PersistentFlags().Changed(FlagRootURL) {
 		url = rootCmd.PersistentFlags().Lookup(FlagRootURL).Value.String()

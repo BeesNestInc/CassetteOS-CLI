@@ -22,14 +22,14 @@ import (
 	"os"
 	"time"
 
-	"github.com/BeesNestInc/CassetteOS-CLI/codegen/casaos"
+	"github.com/BeesNestInc/CassetteOS-CLI/codegen/cassetteos"
 	"github.com/spf13/cobra"
 )
 
 // healthcheckLogsCmd represents the healthcheckLogs command
 var healthcheckLogsCmd = &cobra.Command{
 	Use:     "logs",
-	Short:   "get all `casaos-*` logs and save to a ZIP file",
+	Short:   "get all `cassetteos-*` logs and save to a ZIP file",
 	Aliases: []string{"log"},
 	RunE: func(cmd *cobra.Command, args []string) error {
 		rootURL, err := rootCmd.PersistentFlags().GetString(FlagRootURL)
@@ -37,9 +37,9 @@ var healthcheckLogsCmd = &cobra.Command{
 			return err
 		}
 
-		url := fmt.Sprintf("http://%s/%s", rootURL, BasePathCasaOS)
+		url := fmt.Sprintf("http://%s/%s", rootURL, BasePathCassetteOS)
 
-		client, err := casaos.NewClientWithResponses(url)
+		client, err := cassetteos.NewClientWithResponses(url)
 		if err != nil {
 			return err
 		}
@@ -55,7 +55,7 @@ var healthcheckLogsCmd = &cobra.Command{
 		}
 
 		if response.StatusCode() != http.StatusOK {
-			var baseResponse casaos.BaseResponse
+			var baseResponse cassetteos.BaseResponse
 			if err := json.Unmarshal(response.Body, &baseResponse); err != nil {
 				return fmt.Errorf("%s - %s", response.Status(), response.Body)
 			}
@@ -69,13 +69,13 @@ var healthcheckLogsCmd = &cobra.Command{
 		}
 
 		if outDir == "" {
-			outDir, err = os.MkdirTemp("", "casaos-cli-*")
+			outDir, err = os.MkdirTemp("", "cassetteos-cli-*")
 			if err != nil {
 				return err
 			}
 		}
 
-		zipFilePath := fmt.Sprintf("%s/casaos-%s-logs-%s.zip", outDir, Version, time.Now().Format("20060102150405"))
+		zipFilePath := fmt.Sprintf("%s/cassetteos-%s-logs-%s.zip", outDir, Version, time.Now().Format("20060102150405"))
 
 		if err := os.WriteFile(zipFilePath, response.Body, 0o600); err != nil {
 			return err
