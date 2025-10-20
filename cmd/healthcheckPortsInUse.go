@@ -22,7 +22,7 @@ import (
 	"sort"
 	"text/tabwriter"
 
-	"github.com/BeesNestInc/CassetteOS-CLI/codegen/casaos"
+	"github.com/BeesNestInc/CassetteOS-CLI/codegen/cassetteos"
 	"github.com/spf13/cobra"
 )
 
@@ -37,9 +37,9 @@ var healthcheckPortsInUseCmd = &cobra.Command{
 			return err
 		}
 
-		url := fmt.Sprintf("http://%s/%s", rootURL, BasePathCasaOS)
+		url := fmt.Sprintf("http://%s/%s", rootURL, BasePathCassetteOS)
 
-		client, err := casaos.NewClientWithResponses(url)
+		client, err := cassetteos.NewClientWithResponses(url)
 		if err != nil {
 			return err
 		}
@@ -53,7 +53,7 @@ var healthcheckPortsInUseCmd = &cobra.Command{
 		}
 
 		if response.StatusCode() != http.StatusOK {
-			var baseResponse casaos.BaseResponse
+			var baseResponse cassetteos.BaseResponse
 			if err := json.Unmarshal(response.Body, &baseResponse); err != nil {
 				return fmt.Errorf("%s - %s", response.Status(), response.Body)
 			}
